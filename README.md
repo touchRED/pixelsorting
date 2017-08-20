@@ -9,14 +9,14 @@ The code contained here was written for part of my Summer Fellowship with UGA's 
 
 In order to build the app, first clone the repository:
 
-  $ git clone https://github.com/touchRED/pixelsorting.git
+    $ git clone https://github.com/touchRED/pixelsorting.git
 
 Then, import the pixelsorting directory into the openFrameworks project generator. This step will construct your Makefile and XCode project file.
 
 Once you're done importing it, go into the pixelsorting directory, compile and run:
 
-  $ cd pixelsorting
-  $ make && make RunRelease
+    $ cd pixelsorting
+    $ make && make RunRelease
 
 Just drag an image onto the window to sort it! There are some example images you can play with in the bin/data/ folder.
 
