@@ -22,10 +22,11 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-		static void sorter(ofImage &img);
+		void sorter(ofImage &img);
 		static bool sortingFunction(ofColor x, ofColor y);
 
 		ofImage img;
+		ofTexture sorted;
 		ofPixels pix;
 		vector<ofColor> colors;
 		int index = 1;

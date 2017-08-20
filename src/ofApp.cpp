@@ -31,40 +31,14 @@ void ofApp::sorter(ofImage &img){
     }
   }
 
-  img.setFromPixels(newPix);
+  // img.setFromPixels(newPix);
+  sorted.allocate(img.getWidth(), img.getHeight(), GL_RGBA);
+  sorted.loadData(newPix);
 }
 
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-  // img.load("babylon.jpg");
-  //
-  // pix = img.getPixels();
-  //
-  // for(int i = 0; i < img.getWidth(); i++){
-  //   for(int j = 0; j < img.getHeight(); j++){
-  //     ofColor tmp = img.getColor(i, j);
-  //     colors.push_back(tmp);
-  //   }
-  // }
-  //
-  // std::sort(colors.begin(), colors.end(), sortingFunction);
-  //
-  // ofPixels newPix;
-  // newPix.allocate(img.getWidth(), img.getHeight(), 4);
-  //
-  // cout << "colors size: " << colors.size() << endl;
-  // cout << "pix size: " << newPix.getWidth() << ", " << newPix.getHeight() << endl;
-  //
-  // int k = 0;
-  // for(int i = 0; i < newPix.getHeight(); i++){
-  //   for(int j = 0; j < newPix.getWidth(); j++){
-  //     newPix.setColor(j, i, colors[k]);
-  //     k++;
-  //   }
-  // }
-  //
-  // img.setFromPixels(newPix);
 }
 
 //--------------------------------------------------------------
@@ -75,21 +49,39 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-  if(!img.isAllocated()) return;
+  // if(!img.isAllocated()) return;
+  //
+  // if(img.getWidth() > img.getHeight()){
+  //
+  //   float scaledHeight = (ofGetWidth() * img.getHeight()) / img.getWidth();
+  //   float yOff = (ofGetHeight() - scaledHeight)/2;
+  //
+  //   img.draw(0, yOff, ofGetWidth(), scaledHeight);
+  //
+  // }else{
+  //
+  //   float scaledWidth = (ofGetHeight() * img.getWidth()) / img.getHeight();
+  //   float xOff = (ofGetWidth() - scaledWidth)/2;
+  //
+  //   img.draw(xOff, 0, scaledWidth, ofGetHeight());
+  //
+  // }
 
-  if(img.getWidth() > img.getHeight()){
+  if(!sorted.isAllocated()) return;
 
-    float scaledHeight = (ofGetWidth() * img.getHeight()) / img.getWidth();
+  if(sorted.getWidth() > sorted.getHeight()){
+
+    float scaledHeight = (ofGetWidth() * sorted.getHeight()) / sorted.getWidth();
     float yOff = (ofGetHeight() - scaledHeight)/2;
 
-    img.draw(0, yOff, ofGetWidth(), scaledHeight);
+    sorted.draw(0, yOff, ofGetWidth(), scaledHeight);
 
   }else{
 
-    float scaledWidth = (ofGetHeight() * img.getWidth()) / img.getHeight();
+    float scaledWidth = (ofGetHeight() * sorted.getWidth()) / sorted.getHeight();
     float xOff = (ofGetWidth() - scaledWidth)/2;
 
-    img.draw(xOff, 0, scaledWidth, ofGetHeight());
+    sorted.draw(xOff, 0, scaledWidth, ofGetHeight());
 
   }
 
@@ -163,6 +155,6 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 
   img.load(dragInfo.files[0]);
 
-  // sorter(img);
+  sorter(img);
 
 }
