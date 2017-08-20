@@ -5,8 +5,8 @@ Pixel Sorting
 ![Example 2](ex2.png)
 ![Example 3](ex3.png)
 
-The code contained here was written for part of my Summer Fellowship with UGA's Center for Undergraduate Research Opportunities. Made in collaboration with Mark Callahan of the Lamar Dodd School of Art and Ideas for Creative Exploration.
+The code contained here was written for part of my Summer Fellowship with UGA's [Center for Undergraduate Research Opportunities](https://curo.uga.edu/). Made in collaboration with [Mark Callahan](http://mazamedia.com/) of the [Lamar Dodd School of Art](https://art.uga.edu/) and [Ideas for Creative Exploration](http://ideasforcreativeexploration.com/).
 
-In order to build the app, import the code into the oF project generator and build.
+In order to build the app, import the code into the oF project generator and build. Simply drag an image onto the window to sort it! There are some example images you can play with in the bin/data/ folder.
 
-Made with openFrameworks. 
+Made with [openFrameworks](http://openframeworks.cc/). 
