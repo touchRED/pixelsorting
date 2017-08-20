@@ -7,7 +7,9 @@ Pixel Sorting
 
 The code contained here was written for part of my Summer Fellowship with UGA's [Center for Undergraduate Research Opportunities](https://curo.uga.edu/). Made in collaboration with [Mark Callahan](http://mazamedia.com/) of the [Lamar Dodd School of Art](https://art.uga.edu/) and [Ideas for Creative Exploration](http://ideasforcreativeexploration.com/).
 
-In order to build the app, first clone the repository:
+If you'd like to try it out, you need [openFrameworks](http://openframeworks.cc/) first! Go get it -->
+
+To build the app, first clone the repository:
 
     $ git clone https://github.com/touchRED/pixelsorting.git
 
