@@ -9,6 +9,8 @@ The code contained here was written for part of my Summer Fellowship with UGA's 
 
 If you'd like to try it out, you need openFrameworks first! [Go get it -->](http://openframeworks.cc/)
 
+Alternatively, you can just use [this other tool I made](http://ctrotter.co/pixelsorting-web/) for the browser.
+
 To build the app, first clone the repository:
 
     $ git clone https://github.com/touchRED/pixelsorting.git
